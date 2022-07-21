@@ -1,0 +1,40 @@
+.featured {
+  @apply h-[90vh] relative;
+
+  .category {
+    @apply absolute text-[30px] items-center font-medium flex  top-20 left-12;
+
+    select {
+      @apply text-sm bg-black cursor-pointer text-white ml-5 p-[5px];
+      border: 1px solid white;
+    }
+  }
+
+  img {
+    @apply w-full h-full object-cover;
+  }
+
+  .info {
+    @apply w-[35%] absolute left-[50%] bottom-24 text-white flex flex-col;
+    width: 35%;
+    left: 50px;
+
+    .desc {
+      @apply mx-0 py-5;
+    }
+
+    .buttons {
+      display: flex;
+
+      button {
+        @apply gap-x-3 w-full p-5 font-medium py-2 mr-3 cursor-pointer border-none rounded-lg flex items-center justify-center text-lg;
+        .icon {
+          @apply w-5;
+        }
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

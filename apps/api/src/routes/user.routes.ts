@@ -14,4 +14,7 @@ router.get('/', userController.getAllUser);
 //get user by id
 router.get('/:id', userController.getUserById);
 
+//get user stats
+router.get('/statss', userController.getUserStats);
+
 export default router;

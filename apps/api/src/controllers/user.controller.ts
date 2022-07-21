@@ -64,6 +64,47 @@ const userController = {
       res.status(400).json(error);
     }
   },
+  //get user stats
+  getUserStats: async (req: Request, res: Response) => {
+    const today = new Date();
+    const lastYear = today.setFullYear(today.getFullYear() - 1);
+
+    const monthArray = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+
+    try {
+      const data = await UserModel.aggregate([
+        { $project: { a: 1, b: 1 } },
+        { $skip: 5 },
+        // {
+        //   $project: {
+        //     month: { $month: '$createdAt' },
+        //   },
+        // },
+        // {
+        //   $group: {
+        //     _id: '$month',
+        //     // total: { $sum: 1 },
+        //   },
+        // },
+      ]);
+      res.status(200).json(data);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  },
 };
 
 export default userController;

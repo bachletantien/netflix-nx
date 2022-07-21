@@ -18,13 +18,13 @@ type Movie = {
   video: string;
   year: string;
   limit: number;
-  genre: string;
+  genre: Array<string>;
   isSeries: boolean;
 };
 
 type List = {
   title: string;
   type: string;
-  genre: string;
-  content: Array;
+  genre: Array<string>;
+  content: Array<string>;
 };

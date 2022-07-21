@@ -1,0 +1,38 @@
+.list {
+  @apply w-full mt-3;
+
+  .listTitle {
+    @apply text-white text-lg font-medium;
+    margin-left: 50px;
+  }
+
+  .wrapper {
+    @apply relative;
+
+    .icon {
+      @apply text-white;
+    }
+
+    .sliderArrow {
+      @apply z-40 cursor-pointer text-white absolute top-0 bottom-0 m-auto  h-full;
+      width: 50px;
+      background-color: rgb(22, 22, 22, 0.5);
+
+      &.left {
+        left: 0;
+      }
+
+      &.right {
+        right: 0;
+      }
+    }
+
+    .container {
+      @apply flex mt-3;
+      margin-left: 50px;
+      width: max-content;
+      transform: translateX(0px);
+      transition: all 1s ease;
+    }
+  }
+}

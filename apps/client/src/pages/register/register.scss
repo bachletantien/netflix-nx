@@ -1,0 +1,63 @@
+.register {
+  @apply w-screen h-screen relative;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../../assets/bg-register.jpg');
+  background-size: cover;
+
+  .top {
+    .wrapper {
+      @apply flex items-center justify-between;
+      padding: 20px 50px;
+
+      .logo {
+        height: 40px;
+      }
+
+      .loginButton {
+        @apply border-none text-white text-base font-medium cursor-pointer;
+        background-color: red;
+        border-radius: 5px;
+        padding: 5px 15px;
+      }
+    }
+  }
+
+  .container {
+    @apply text-white w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center;
+
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      @apply m-5;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .input {
+      @apply w-1/2 flex justify-between items-center bg-white text-black mt-5;
+      height: 50px;
+      border-radius: 5px;
+
+      input {
+        flex: 9;
+        @apply h-full border-none;
+        padding: 0 10px;
+      }
+
+      .registerButton {
+        @apply h-full border-none text-white cursor-pointer;
+        flex: 3;
+        background-color: red;
+        font-size: 22px;
+      }
+    }
+  }
+}

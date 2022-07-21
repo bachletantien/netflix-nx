@@ -1,0 +1,43 @@
+.navbar {
+  @apply w-full text-white fixed text-sm top-0 z-50;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  &.scrolled {
+    @apply bg-black;
+  }
+  .container {
+    @apply px-12 py-0 flex items-center justify-between h-[70px];
+    .left {
+      @apply flex items-center;
+      img {
+        @apply h-6 mr-10;
+      }
+
+      span {
+        @apply cursor-pointer mr-5;
+      }
+    }
+    .right {
+      @apply flex items-center;
+      .icon {
+        @apply w-6 mx-4 my-0 cursor-pointer;
+      }
+      .profile {
+        @apply flex;
+        .options {
+          @apply hidden bg-black rounded-md;
+        }
+        span {
+          @apply p-3 cursor-pointer;
+        }
+        &:hover {
+          .options {
+            @apply flex  flex-col absolute;
+          }
+        }
+      }
+      img {
+        @apply w-7 h-7 rounded-md object-cover cursor-pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.listItem {
+  @apply cursor-pointer text-white bg-black mr-3 overflow-hidden;
+  width: 225px;
+  height: 120px;
+  flex-basis: 225px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  img {
+    @apply w-full h-full object-cover;
+  }
+
+  video {
+    @apply w-full object-cover absolute top-0 left-0;
+    height: 140px;
+  }
+
+  &:hover {
+    width: 325px;
+    height: 300px;
+    position: absolute;
+    top: -150px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+    border-radius: 5px;
+
+    img {
+      height: 140px;
+    }
+
+    .itemInfo {
+      @apply flex flex-col;
+      padding: 5px;
+
+      .icons {
+        @apply flex mb-3;
+
+        .icon {
+          @apply w-8 h-8 text-white;
+          border: 2px solid white;
+          padding: 5px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+      .itemInfoTop {
+        @apply flex items-center text-gray mb-3 font-semibold text-sm;
+
+        .limit {
+          border: 1px solid gray;
+          padding: 1px 3px;
+          margin: 0 10px;
+        }
+      }
+
+      .desc {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+
+      .genre {
+        @apply text-sm text-gray-light;
+        font-size: 14px;
+      }
+    }
+  }
+}

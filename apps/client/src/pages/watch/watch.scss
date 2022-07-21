@@ -1,0 +1,13 @@
+.watch {
+  @apply w-screen h-screen;
+
+  .back {
+    @apply flex items-center absolute text-white cursor-pointer z-20;
+    top: 10px;
+    left: 10px;
+  }
+
+  .video {
+    @apply w-full h-full object-cover;
+  }
+}
